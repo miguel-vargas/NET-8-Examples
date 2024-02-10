@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using TopLevelStatementsExample.Models;
 
+/*
+ * NOTES: Compare file-level namespaces like in Startup.cs. Everything
+ * in this file is indented by one tab and surrounded by brackets.
+ */
 namespace TopLevelStatementsExample.Controllers
 {
     [Route("api/[controller]")]

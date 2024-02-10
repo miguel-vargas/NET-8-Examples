@@ -1,3 +1,12 @@
+/*
+ * NOTES: We are able to declare namespaces for all types in a file
+ * ONCE and save spacing. We no longer need brackets between the entire
+ * file and indenting everything by one tab. (Results in cleaner and
+ * clearer code)
+ *
+ * IMPORTANT: ONLY available with C# 10 and above. (.NET 6 uses C# 10)
+ */ 
+
 namespace TopLevelStatementsExample;
 
 public class Startup
