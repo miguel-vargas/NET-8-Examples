@@ -16,7 +16,7 @@ namespace ControllerExample.Controllers
     // [controller] will take care of the route automatically so it then becomes "/weatherforecast"
     [Route("api/[controller]")]
     [ApiController] // NOTES: this attribute also helps .NET to identify a controller.
-    public class WeatherForecastController : ControllerBase
+    public class WeatherController : ControllerBase
     {
         private static readonly string[] Summaries =
         [
