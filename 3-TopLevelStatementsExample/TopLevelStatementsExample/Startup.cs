@@ -23,7 +23,6 @@ public class Startup
         // Add services to the container.
         services.AddAuthorization();
         
-        // NOTES: Instead of FastAPI we are using traditional controllers.
         services.AddControllers();
     
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -44,7 +43,6 @@ public class Startup
 
         app.UseAuthorization();
 
-        // NOTES: Need this to use the controllers added above.
         app.MapControllers();
     }
 }

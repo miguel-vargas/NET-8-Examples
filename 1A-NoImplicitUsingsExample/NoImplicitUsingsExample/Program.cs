@@ -13,7 +13,6 @@ public class Program
         // Add services to the container.
         builder.Services.AddAuthorization();
         
-        // NOTES: Instead of FastAPI we are using traditional controllers.
         builder.Services.AddControllers();
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -32,8 +31,6 @@ public class Program
         app.UseHttpsRedirection();
 
         app.UseAuthorization();
-        
-        // NOTES: Need this to use the controllers added above.
         app.MapControllers();
 
         app.Run();

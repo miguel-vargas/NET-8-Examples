@@ -52,7 +52,6 @@ public class WeatherController : ControllerBase
         
     // POST api/<weather>
     [HttpPost]
-    // NOTES: The FromBody here tells .NET that "value" is in the body of the request
     public void Post([FromBody] string value)
     {
     }

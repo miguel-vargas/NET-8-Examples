@@ -1,5 +1,10 @@
 namespace StartupExample;
 
+/*
+ * NOTES: Startup.cs is another file that was typically used to configure
+ * our WebAPIs. It allows Program.cs to be concerned with running the app
+ * and Startup is just concerned with configuring the app at "startup".
+ */
 public class Startup
 {
     private IConfiguration Configuration { get; }
@@ -9,12 +14,15 @@ public class Startup
         Configuration = configuration;
     }
     
+    /*
+     * NOTES: This method will take care of adding services to our service
+     * collection.
+     */
     public void ConfigureServices(IServiceCollection services)
     {
         // Add services to the container.
         services.AddAuthorization();
         
-        // NOTES: Instead of FastAPI we are using traditional controllers.
         services.AddControllers();
     
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -22,6 +30,10 @@ public class Startup
         services.AddSwaggerGen();
     }
 
+    /*
+     * NOTES: This method will take care of telling the app to use the
+     * services we want.
+     */
     public void Configure(WebApplication app, IHostEnvironment env)
     {
         // Configure the HTTP request pipeline.
@@ -35,7 +47,6 @@ public class Startup
 
         app.UseAuthorization();
 
-        // NOTES: Need this to use the controllers added above.
         app.MapControllers();
     }
 }

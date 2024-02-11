@@ -9,7 +9,7 @@ public class Program
         // Add services to the container.
         builder.Services.AddAuthorization();
         
-        // NOTES: Instead of FastAPI we are using traditional controllers.
+        // NOTES: Instead of Minimal API we are using traditional controllers.
         builder.Services.AddControllers();
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
