@@ -1,13 +1,26 @@
+<!-- NOTES: CSPROJ files describe your project, its features, its dependencies/references, etc. -->
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
+        <!-- NOTES: This setting reduces a great number of using statements. -->
+        <!-- This feature is available starting with C# 10 (associated with .NET 6) -->
+        <!-- It brings in commonly used namespaces for the type of project you are building -->
+        <!-- I will disable this in EXAMPLE 1A to see the difference. -->
         <ImplicitUsings>enable</ImplicitUsings>
         <InvariantGlobalization>true</InvariantGlobalization>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
+    <!-- NOTES: This section of the CSPROJ file can be thought of as the equivalent of a package.json -->
+    
+    <!-- We list which packages our project needs to reference and which version. Typically for official -->
+    <!-- .NET/Microsoft packages their major version number coincides with the target framework. In this -->
+    <!-- case we are using .NET 8 so Microsoft packages listed below have a major version of 8. -->
+    
+    <!-- Instead of npm packages for JS projects these are called NuGet packages. The premise is similar -->
+    <!-- where a central location hosts these packages for us to download and use. -->
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0"/>
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
@@ -18,10 +31,6 @@
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Controllers\" />
     </ItemGroup>
 
 </Project>
